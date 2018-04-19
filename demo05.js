@@ -1,49 +1,31 @@
 /**
  * Created by qile on 2017/8/14.
  */
+var obj = {};
+obj.x = 2;//直接添加属性
+console.log(obj.x);//通过.访问属性
+obj.x = 5;//设置属性
+console.log(obj["x"]);//通过[]访问属性
+delete obj.x;//删除属性
+console.log(obj.x);
 
-function foo(){}
-console.log(foo); //function foo(){}
-console.log(typeof foo); //function
-console.log(foo instanceof Object); //true
-console.log(foo instanceof Function); //true
-console.log(foo === window.foo); //true
+//访问属性的for循环练习
+var obj2 = {
+    id_1:2,
+    id_2:4,
+    id_3:6,
+    id_4:8,
+    id_5:10
+};
+2,5
+//思考obj3 和 obj4 内容是什么？为什么？
+var obj3 = {};
+for(var i=0;i<10;i++){
+    obj3.i = i;
+}
 
-
-console.log(typeof Function);//function
-console.log(typeof Array);	 //function
-console.log(typeof Date);	 //function
-console.log(typeof Error); 	 //function
-console.log(typeof Math);	 //object
-console.log(typeof JSON);	 //object
-
-
-//思考：
-console.log(typeof new Function());// function or object
-console.log(typeof new Array());	 // function or object
-console.log(typeof new Date());	 // function or object
-function
-object
-object
-//补充思考：
-console.log(Function instanceof Function);
-console.log(Array instanceof Function);
-console.log(Date instanceof Function);
-console.log(Date instanceof Object);
-console.log(Array instanceof Object);
-console.log(Function instanceof Object);
-console.log(Math instanceof Object);
-console.log(Math instanceof Function);
-console.log(JSON instanceof Function);
-console.log(JSON instanceof Object);
-
-true
- true
-true
-true
-true
-true
-true
-false
-false
- true
+var obj4 = {};
+for(var i=0;i<10;i++){
+    obj4[i] = i;
+}
+9
